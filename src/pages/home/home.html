@@ -1,0 +1,30 @@
+<ion-header>
+  <ion-navbar color="danger">
+
+    <button ion-button menuToggle start>
+      <ion-icon name="menu" class="scanner_icon"></ion-icon>
+    </button>
+    <ion-title text-center> Home</ion-title>
+    <ion-buttons end>
+      <button ion-button (click)="openScannerPage()">
+        <ion-icon name="qr-scanner" class="scanner_icon"></ion-icon>
+      </button>
+    </ion-buttons>
+
+
+  </ion-navbar>
+</ion-header>
+
+<ion-content class="MyBgClass" padding>
+  <ion-refresher slot="fixed" (ionRefresh)="doRefresh($event)">
+    <ion-refresher-content pullingIcon="arrow-dropdown" pullingText="Pull to refresh" 
+    refreshingSpinner="circles" refreshingText="Refreshing...">
+    </ion-refresher-content>
+  </ion-refresher>
+  <ion-item text-wrap *ngFor="let item of items">
+    <h2>{{item.title}}</h2>
+    <p>{{item.body}}</p>
+    <!--<ion-icon *ngIf="item.image!=''" name="attach" item-end (click)="showImage(item.image)"></ion-icon>
+		     <p>{{item.create_date}}</p> -->
+  </ion-item>
+</ion-content>

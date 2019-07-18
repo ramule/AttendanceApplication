@@ -1,0 +1,33 @@
+page-login {
+
+    .xyz{
+        height: 35vw; 
+        width: 35vw; 
+       border: 2px solid #fff;
+       border-radius: 50%;
+       box-shadow: 0 0 5px rgb(3, 0, 0);
+       display: inline-block;
+       margin-left: 32%;
+       margin-right: auto;
+       margin-top:8%;
+       margin-bottom: 10%;
+       
+    }
+
+    .abc{
+        background: url(../assets/imgs/BgImage.png);
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+        border-bottom-color: black;
+    }
+
+    ion-input {
+        &.custom-input {
+          font-size: 20px; //sets text font size
+          ::placeholder {
+            font-size: 12px; //sets placeholder font size
+          }
+        }
+      }
+}

@@ -1,0 +1,126 @@
+<!--
+  Generated template for the LmsDashboardPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar color="danger">
+
+    <button ion-button menuToggle start>
+      <ion-icon name="menu" class="scanner_icon"></ion-icon>
+    </button>
+    <ion-title text-center> Dashboard </ion-title>
+    <ion-buttons end>
+      <button ion-button (click)="openScannerPageDashboard()">
+        <ion-icon name="qr-scanner" class="scanner_icon"></ion-icon>
+      </button>
+    </ion-buttons>
+
+  </ion-navbar>
+
+</ion-header>
+
+<ion-content class = "MyBgClass">
+
+  <h3>My Leave Planner</h3>
+
+  <ion-card>
+
+    <ion-card-header class="CardHeaderClass">
+      <b>Priviledge Leaves Applied</b>
+    </ion-card-header>
+
+    <ion-card-content>
+      <ion-item>
+        <ion-label class="MyClassLabel">{{ item.prv_leave_count}} Days</ion-label>
+      </ion-item>
+      <ion-item>
+        <button default class="MyButtonClass" ion-button (click)="openPageApplyLeave()">Apply Leave</button>
+      </ion-item>
+    </ion-card-content>
+  </ion-card>
+
+  <ion-card>
+    <ion-card-header class="CardHeaderClass">
+      <b>Pending Requests</b>
+    </ion-card-header>
+
+    <ion-card-content>
+      <ion-item>
+        <ion-label class="MyClassLabel">{{ item.pending_leave_count}} Leave Requested</ion-label>
+      </ion-item>
+      <ion-item>
+        <button default class="MyButtonClass" ion-button (click)="openViewLeavesPage()">View Leaves</button>
+      </ion-item>
+    </ion-card-content>
+
+  </ion-card>
+
+  <ion-card>
+    <ion-card-header class="CardHeaderClass">
+      <b>Holiday List</b>
+    </ion-card-header>
+
+    <ion-card-content>
+      <ion-item>
+        <ion-slides class="slide_class" autoplay="1000" loop="true" speed="300">
+          <ion-slide>
+            <img src="/assets/imgs/Holiday_Imgs/new_year_img.jpg">
+          </ion-slide>
+
+          <ion-slide>
+            <img src="/assets/imgs/Holiday_Imgs/republic_day_img.jpg">
+          </ion-slide>
+
+          <ion-slide>
+            <img src="/assets/imgs/Holiday_Imgs/holi_img.jpg">
+          </ion-slide>
+
+          <ion-slide>
+            <img src="/assets/imgs/Holiday_Imgs/labour_day_img.jpg">
+          </ion-slide>
+
+          <ion-slide>
+            <img src="/assets/imgs/Holiday_Imgs/eid_ul_fitr_img.jpg">
+          </ion-slide>
+
+          <ion-slide>
+            <img src="/assets/imgs/Holiday_Imgs/independence_day_img.jpg">
+          </ion-slide>
+
+          <ion-slide>
+            <img src="/assets/imgs/Holiday_Imgs/ganesh_img.jpg">
+          </ion-slide>
+
+          <ion-slide>
+            <img src="/assets/imgs/Holiday_Imgs/gandhi_jayanti_img.jpg">
+          </ion-slide>
+
+          <ion-slide>
+            <img src="/assets/imgs/Holiday_Imgs/dussehra_img.png">
+          </ion-slide>
+
+          <ion-slide>
+            <img src="/assets/imgs/Holiday_Imgs/diwali_img.jpg">
+          </ion-slide>
+
+          <ion-slide>
+            <img src="/assets/imgs/Holiday_Imgs/christmas_img.jpg">
+          </ion-slide>
+
+        </ion-slides>
+      </ion-item>
+
+      <ion-item>
+        <button default class="MyButtonClass" ion-button (click)="viewHolidayPage()">View Holidays</button>
+      </ion-item>
+
+    </ion-card-content>
+  </ion-card>
+
+
+
+
+</ion-content>

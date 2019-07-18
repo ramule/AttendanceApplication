@@ -1,0 +1,81 @@
+<!--
+  Generated template for the MyAccountPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar color="danger">
+
+    <button ion-button menuToggle start>
+      <ion-icon name="menu" class="scanner_icon"></ion-icon>
+    </button>
+    <ion-title text-center> My Account </ion-title>
+    <ion-buttons end>
+      <button ion-button (click)="openScannerPageMyAcc()">
+        <ion-icon name="qr-scanner" class="scanner_icon"></ion-icon>
+      </button>
+    </ion-buttons>
+  </ion-navbar>
+
+</ion-header>
+
+<ion-content class="MyBgClass" padding>
+
+  <ion-refresher slot="fixed" (ionRefresh)="doRefresh($event)">
+    <ion-refresher-content pullingIcon="arrow-dropdown" pullingText="Pull to refresh" refreshingSpinner="bubbles" refreshingText="Refreshing...">
+    </ion-refresher-content>
+  </ion-refresher>
+  
+  <div class="profile" *ngIf="userdata.profile_picture != '' && userdata.profile_picture != null">
+    <img src="{{userdata.profile_picture}}" alt="Profile Picture">
+
+    <h4>{{ userdata.first_name +" "+userdata.last_name }}</h4>
+  </div>
+
+  <div class="profile" *ngIf="userdata.profile_picture == '' || userdata.profile_picture == null">
+    <img src="{{userdata.profile_picture}}" alt="Profile Picture">
+
+    <h4>
+      <strong>{{ userdata.first_name +" "+userdata.last_name }}</strong>
+    </h4>
+  </div>
+
+  <ion-list>
+    <ion-item>
+      <ion-label>
+        <strong> Name</strong> : {{userdata.first_name}} &nbsp;{{userdata.last_name}}
+      </ion-label>
+    </ion-item>
+
+    <ion-item>
+      <ion-label>
+        <strong> DOB</strong> : {{userdata.dob | date: "dd/MM/yyyy"}}
+      </ion-label>
+    </ion-item>
+
+    <ion-item>
+      <ion-label>
+        <strong>Address</strong> : {{userdata.street_address +","+ userdata.city +","+ userdata.state +","+userdata.country +","+
+        userdata.pincode}}
+      </ion-label>
+      <button ion-button outline item-end (click)="editProfile('address')">edit</button>
+    </ion-item>
+
+    <ion-item>
+      <ion-label>
+        <strong>Contact</strong> : {{userdata.mobile_no}}
+      </ion-label>
+      <button ion-button outline item-end (click)="editProfile('mobile_no')">edit</button>
+    </ion-item>
+
+    <ion-item>
+      <ion-label>
+        <strong>Designation</strong> : {{userdata.designation}}
+      </ion-label>
+    </ion-item>
+
+  </ion-list>
+
+</ion-content>

@@ -1,0 +1,47 @@
+page-my-account {
+
+  
+    .profile {    
+        text-align:center;
+        color: #186AAB;
+        font-weight: 800;
+        margin-bottom: 15px;
+        height: 35vw; 
+        width: 35vw; 
+        border: 2px solid #fff;
+        box-shadow: 0 0 5px rgb(3, 0, 0);
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top:8%;
+        margin-bottom: 25%;
+        
+    }
+
+    .button_class{
+        text-align: center;
+        margin-left: auto;
+        margin-right: auto;
+        display: block;
+        background-color: rgb(68, 65, 65);
+    }
+
+    .change_btn {
+		position:relative;
+	    left: -5%;
+	    top: 12%;
+	    font-size: 20px;
+	    font-weight:600;
+	    padding: 5px;
+	    border: 2px solid #186AAB;
+        border-radius: 5px;
+        margin-top: 10px;
+	}
+
+    .ion-label{
+        font-size: small;
+    }
+    .ion-card{
+        width: 2px;
+    }
+}

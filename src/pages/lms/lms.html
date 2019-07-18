@@ -1,0 +1,57 @@
+<!--
+  Generated template for the LmsPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar color="danger">
+
+    <button ion-button menuToggle start>
+      <ion-icon name="menu" class="scanner_icon"></ion-icon>
+    </button>
+    <ion-title text-center> LMS </ion-title>
+    <ion-buttons end>
+      <button ion-button (click)="openScannerPageLMS()">
+        <ion-icon name="qr-scanner" class="scanner_icon"></ion-icon>
+      </button>
+    </ion-buttons>
+
+  </ion-navbar>
+
+</ion-header>
+
+<ion-content class="MyBgClass" padding>
+  <div class="div1">
+    <button ion-button class="myClass1" (click)="dashboardFunction()" type="submit" block>
+      <b>
+        <i>Dashboard</i>
+      </b>
+    </button>
+  </div>
+
+  <div class="div2">
+    <button ion-button class="myClass2" (click)="holidayFunction()" block>
+      <b>
+        <i> Holiday List</i>
+      </b>
+    </button>
+  </div>
+
+  <div class="div3">
+    <button ion-button class="myClass3" (click)="applyLeaveFunction()" block>
+      <b>
+        <i> Apply Leaves</i>
+      </b>
+    </button>
+  </div>
+
+  <div class="div4">
+    <button ion-button class="myClass4" (click)="viewLeaveFunction()" block>
+      <b>
+        <i> View Leaves</i>
+      </b>
+    </button>
+  </div>
+</ion-content>

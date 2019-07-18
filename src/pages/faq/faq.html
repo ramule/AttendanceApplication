@@ -1,0 +1,48 @@
+<!--
+  Generated template for the FaqPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar color="danger">
+
+    <button ion-button menuToggle start>
+      <ion-icon name="menu" class="scanner_icon"></ion-icon>
+    </button>
+    <ion-title text-center> FAQ </ion-title>
+    <ion-buttons end>
+      <button ion-button (click)="openScannerPageFAQ()">
+        <ion-icon name="qr-scanner" class="scanner_icon"></ion-icon>
+      </button>
+    </ion-buttons>
+
+  </ion-navbar>
+
+</ion-header>
+
+<ion-content class="MyBgClass" padding>
+
+  <p>1. What is username in terms of login into the application?</p>
+  <p>--> Username is mothing but the employee id which will be provided after the registration of an employee for the first
+    time by admin.</p>
+
+  <p>2. How to give attendance with this application?</p>
+  <p>--> You are supposed to scan the QR code given by company and you will be automatically logged in and same for the logout. While logout the last out-time will be considered.</p>
+
+  <p>3. Will I be able to give my attendance with different device other than own one?</p>
+  <p>--> No. As a security purpose while registration of an employee you will have to give your device's IMEI number which will be unique for your device of your device itself.</p>
+
+  <p>4. Will I be able to login/logout by scanning given QR code other than office premises?</p>
+  <p>--> No. It is strictly prohibited as another term of security where employee will have to do this activity within the office premises itself.</p>
+
+  <p>5. What if I forget to scan code for attendance for particular day?</p>
+  <p>--> You will have to fill manual attendance and get it approved with you manager.</p>
+
+  <p>6. How do I check whether my leave has been approved or not?</p>
+  <p>--> This particular information will be available in the 'View_leaves' tab under 'LMS' tab in the sidemenu.</p>
+
+  <p>7. Till what period the paysleep will be available for me?</p>
+  <p>--> The paysleep will be available of last 3 months only for every employee.</p>
+</ion-content>

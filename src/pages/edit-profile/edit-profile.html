@@ -1,0 +1,62 @@
+<!--
+  Generated template for the EditProfilePage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar color='navbarColor'>
+    <ion-buttons start>
+      <button ion-button (click)="closeModal()">Close</button>
+    </ion-buttons>
+    <ion-title>Edit Profile</ion-title>
+    <ion-buttons end>
+      <button ion-button (click)="update(formdata)">Update</button>
+    </ion-buttons>
+  </ion-navbar>
+
+</ion-header>
+
+<ion-content padding>
+  <div *ngIf="type=='address'">
+    <ion-item>
+      <ion-label floating> Street Address</ion-label>
+      <ion-input type="text" [(ngModel)]="formdata.street_address" name="street_address" value="{{userdata.street_address}}"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label floating> City</ion-label>
+      <ion-input type="text" [(ngModel)]="formdata.city" name="city" value="{{userdata.city}}"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label floating> State</ion-label>
+      <ion-input type="text" [(ngModel)]="formdata.state" name="state" value="{{userdata.state}}"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label floating> Country</ion-label>
+      <ion-input type="text" [(ngModel)]="formdata.country" name="country" value="{{userdata.country}}"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label floating> Pincode</ion-label>
+      <ion-input type="number" maxlength="6" [(ngModel)]="formdata.pincode" name="pincode" value="{{userdata.pincode}}"></ion-input>
+    </ion-item>
+  </div>
+
+  <div *ngIf="type=='mobile_no'">
+    <ion-item>
+      <ion-label floating> Mobile Number</ion-label>
+      <ion-input type="tel" maxlength="10" [(ngModel)]="formdata.mobile_no" name="mobile_no" value="{{userdata.mobile_no}}"></ion-input>
+    </ion-item>
+  </div>
+
+  <div *ngIf="type=='profile_picture'">
+    <ion-item>
+      <ion-label>Photo *</ion-label>
+      <ion-input type="file" [(ngModel)]="formdata.photo" name="photo" (change)="changePhoto($event)" accept="image/*"></ion-input>
+    </ion-item>
+  </div>
+</ion-content>
